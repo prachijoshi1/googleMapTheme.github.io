@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Custom Theme</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+        
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.js"></script></head>
+<style>
+    body{
+  margin: 0  300px 20px 300px;
+  
+        /* padding: 100px; */
+  background-color: aqua;
+
+}
+button{
+    padding: 30px;
+    background-color: rgb(0, 3, 15);
+    color: aliceblue;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+h1{
+    font-family: 'Quicksand', sans-serif;
+}
+/* 
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+} */
+#map{
+    box-sizing: border-box;
+    border: 20px solid black;
+    border-radius: 20px;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+  filter: grayscale(100%) invert(92%) contrast(83%);
+
+}
+</style>
+<body>
+   
+    <h1>Custom Google Map</h1>
+    
+
+
+    <!-- <div id="app" class="container-fluid"> -->
+        <!-- <div class="row"> -->
+            <!-- <div class="col-9"> -->
+                <!-- <div class="card p-5"> -->
+                    <div id="map" style="height: 800px" ></div>
+                <!-- </div> -->
+         <!-- </div> -->
+            
+             <!-- <div id="controls" class="col">
+                <div class="card p-5">
+                    <div class="controls-group">
+                        <form name="form" action="">
+                            <h1 class="controls-group_header">Select Theme</h1>
+                            <div class="controls-group_radio-">
+                                <div> -->
+                                    <!-- <label for="theme-dark">Dark</label> -->
+                                    <!-- <input type="radio" name="theme" id="theme-dark" value="dark"> -->
+                                <!-- <button class="bttn" onclick="greet()">
+                                        dark
+                                </button> -->
+
+
+<button onclick="myFunction()"> Toggle Dark Mode</button>
+
+                                <!-- </div>
+                                <div>
+                                     <label for="theme-light">Light</label> -->
+                                    <!-- <input type="radio" name="theme" id="theme-light" value="light"> -->
+                               <!-- <button class="btn2" onclick="greet2()">
+                                   light 
+                               </button>
+                                </div>
+                                <div>
+                                     <label for="theme-random">Random</label>
+                                    <input type="radio" name="theme" id="theme-random" value="random"> 
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="googleMapAPI.js"></script>
+     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI0Zea3jg0sdErctjeZmjF8EGXXs5eBBg&callback=initMap" -->
+        <!-- async>
+        </script> -->
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7zT-QyOQog1TXaCSHKNUOQqZBdPSNaVE&callback=initMap&libraries=&v=weekly">
+
+</script>  
+<script type="text/javascript">
+// alert('yes');
+    // $(document).on('click','.bttn', function greet(){
+    //     $(this).addClass('mapp').siblings().removeClass('mapp')
+    // })
+
+    // $(document).on('click','.btn2', function greet2(){
+    //     $(this).removeClass('mapp')
+    // })
+
+
+    function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
+</script>
+</body>
+
+</html>
